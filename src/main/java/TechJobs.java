@@ -26,6 +26,7 @@ public class TechJobs {
         actionChoices.put("list", "List");
 
         System.out.println("Welcome to LaunchCode's TechJobs App!");
+        System.out.println();
 
         // Allow the user to search until they manually quit
         while (true) {
@@ -56,6 +57,7 @@ public class TechJobs {
             } else { // choice is "search"
 
                 // How does the user want to search (e.g. by skill or employer)
+                System.out.println();
                 String searchField = getUserSelection("Search by:", columnChoices);
 
                 // What is their search term?
@@ -89,7 +91,7 @@ public class TechJobs {
 
         do {
 
-            System.out.println();
+            //System.out.println();
             System.out.println(menuHeader);
 
             // Print available choices
@@ -129,6 +131,11 @@ public class TechJobs {
                 System.out.println(jobProp.getKey() + ": " + jobProp.getValue());
             }
             System.out.println("*****");
+        }
+        if (someJobs.isEmpty()) {
+            System.out.println("No Results");
+        } else {
+            System.out.println();
         }
     }
 
